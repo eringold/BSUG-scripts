@@ -1,0 +1,40 @@
+
+-- Web
+- OpenStudio Installation Instructions:
+http://nrel.github.io/OpenStudio-user-documentation/getting_started/getting_started/
+
+- Measure Writing Guide
+http://nrel.github.io/OpenStudio-user-documentation/reference/measure_writing_guide/
+
+- Measure Code Examples (for OpenStudio.convert)
+http://nrel.github.io/OpenStudio-user-documentation/reference/measure_code_examples/
+
+- OpenStudio SDK Documentation
+https://s3.amazonaws.com/openstudio-sdk-documentation/index.html
+
+- Ruby 2.2 API Documentation
+https://ruby-doc.org/core-2.2.4/
+
+- Automating Excel with Ruby 
+http://rubyonwindows.blogspot.com/2007/03/automating-excel-with-ruby.html
+
+- EnergyPlus Source
+https://github.com/NREL/EnergyPlus
+
+- OpenStudio Source
+https://github.com/NREL/OpenStudio
+
+- openstudio-standards Source
+https://github.com/NREL/openstudio-standards
+
+- OpenStudio-measures
+https://github.com/NREL/OpenStudio-measures
+
+-- Print
+- Computer Science Programming Basics with Ruby
+(Frieder, Frieder and Grossman, 2013, O'Reilley Media)
+
+- Ruby Programming, Second Edition
+(Thomas, 2005, The Pragmatic Programmers)
+
+- 
