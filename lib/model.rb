@@ -2,7 +2,7 @@ require 'openstudio'
 
 module ModelFile
 
-	# version-translates and loads a model
+  # version-translates and loads a model
   def self.load_model(osm_path)
     model_path = OpenStudio::Path.new(osm_path)
     version_translator = OpenStudio::OSVersion::VersionTranslator.new
@@ -10,42 +10,42 @@ module ModelFile
       model = version_translator.loadModel(model_path)
       if model.empty?
         puts "Version translation of #{model_path} failed."
-        exists
-			else
-				model = model.get
-				return model
-			end
-		else 
-			puts "Model could not be found at #{model_path}."
-			exit
+        exit
+      else
+        model = model.get
+        return model
+      end
+    else 
+      puts "Model could not be found at #{model_path}."
+      exit
     end 
-	end
+  end
   
   # returns a unique path by adding incrementing number on filename, 
-	# for saving backups
-	def self.unique_name(osm_path)
-		count = 0
-		unique_name = osm_path
-		while File.exist?(unique_name)
-			count +=1
-			unique_name = "#{File.join(File.dirname(unique_name), File.basename(unique_name,".*"))}_#{count}#{File.extname(unique_name)}"
-		end
-		return unique_name
+  # for saving backups
+  def self.unique_name(osm_path)
+    count = 0
+    unique_name = osm_path
+    while File.exist?(unique_name)
+      count +=1
+      unique_name = "#{File.join(File.dirname(unique_name), File.basename(unique_name,".*"))}_#{count}#{File.extname(unique_name)}"
+    end
+    return unique_name
   end
   
 end 
 
 ##################################################################################################################################
 class OpenStudio::Model::Model
-	# saves a model with the specified name to the specified directory
-	def save_model(name,dir)
-		osm_file = name #+ '.osm'
-		osm_dir = dir
-		osm_path = File.join(osm_dir, osm_file)
-		puts "SAVING #{name} to #{osm_dir}"
-		self.save(osm_path,true)
-		return true
-	end
+  # saves a model with the specified name to the specified directory
+  def save_model(name,dir)
+    osm_file = name #+ '.osm'
+    osm_dir = dir
+    osm_path = File.join(osm_dir, osm_file)
+    puts "SAVING #{name} to #{osm_dir}"
+    self.save(osm_path,true)
+    return true
+  end
 
 end 
 
